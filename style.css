@@ -1,0 +1,22 @@
+html {
+  height: auto;
+  width: 100%;
+  background-image: url(./img/fond-papier.png);
+  background-size: cover;
+}
+header {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+}
+.header {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+body {
+  height: auto;
+  width: 100%;
+}

@@ -3,7 +3,7 @@
 * Créer une application qui permet d' éditer des articles contenants :
      
      - un titre 
-     _ un média à télécharger(image, vidéo, audio)
+     - un média à télécharger(image, vidéo, audio)
      - un contenu textuel 
      
 * Créer une page qui affiche les articles avec :

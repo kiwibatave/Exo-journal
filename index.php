@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./style.css">
+  <script src="jquery.js"></script>
   <title>EXO PHP JOURNAL</title>
 </head>
 <header>
@@ -86,17 +87,26 @@ if ($uploadOk == 0) {
 
 $reponse = $bdd->query('SELECT * FROM content');
 $reponse1 = $reponse->fetchALL();
-foreach ($response1 as $value) {
+foreach ($reponse1 as $value) {
+?>
 
-  echo '<p>'.$value->title.'</p><img src="./uploads"
+<p><?=$value->title?></p>
+<img src="./uploads/<?=$value->image?>">
+<p><?=$value->content?></p>
+<p><?=$value->date?></p>
+
+  <form class="" action="delete.php" method="post">
+    <button type"submit" name="delete" value=""placeholder="Click">
+    <input hidden type="text" name="id" value="<?= $value->id?>">
+  </form>
+  <hr>
+<?php
 }
-
 ?>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+<!-- <script src="https:code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/script.js"></script> -->
 
 </html>
